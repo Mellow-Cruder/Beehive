@@ -156,11 +156,25 @@ which the webpage is viewed: this interaction is
     <a href="#"><i class="fab fa-facebook-f"></i></a>
     <a href="#"><i class="fab fa-twitter"></i></a>
     <a href="#"><i class="fab fa-vk"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
     <a href="#"><i class="fab fa-pinterest"></i></a>
     <a href="#"><i class="fab fa-youtube"></i></a>
   </div>
 </footer>
+<script type="text/javascript">
 
+  function understands_video() {
+  return !!document.createElement('video').canPlayType; // boolean
+  }
+  
+  if ( !understands_video() ) {
+  // Must be older browser or IE.
+  // Maybe do something like hide custom
+  // HTML5 controls. Or whatever...
+  videoControls.style.display = 'none';
+  }
+  
+  </script>
 <script src="main.js"></script>
 </body>
 </html>
