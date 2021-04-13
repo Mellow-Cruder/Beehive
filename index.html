@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <a href="javascript:window.print();">Print Page</a>
 <link rel="dns-prefetch" href="//fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="main.css">
@@ -11,112 +10,6 @@
 which the webpage is viewed: this interaction is
  the code and the respective browser---->
 <script src="https://kit.fontawesome.com/702f2f895a.js" crossorigin="anonymous"></script>
-
-<script type="text/javascript">
-  function validateEmail(theForm) {
-  if (/^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/.test(theForm.email-id.value)){
-  return(true);
-  }
-  alert("Invalid e-mail address! Please enter again carefully!.");
-  return(false);
-  }
-  </script>
-  
-  Body:
-  
-  <form onSubmit="return validateEmail(this);" action="">
-  E-mail Address:
-  <input type="text" name="emailid" />
-  <input type="submit" value="Submit" />
-  <input type="reset" value="Reset" />
-  </form>
-  <script type="text/javascript">
-  function f1() {
-    if(document.all) { return false; }
-  }
-  function f2(e) {
-    if(document.layers || (document.getElementById &! document.all)) {
-      if(e.which==2 || e.which==3) { return false; }
-    }
-  }
-  if(document.layers) {
-    document.captureEvents(Event.MOUSEDOWN);
-    document.onmousedown = f1;
-  }
-  else {
-    document.onmouseup = f2;
-    document.oncontextmenu = f1;
-  }
-  document.oncontextmenu = new function("return false");
-  </script>
-  <a href="javascript:history.back(1)">Previous Page</a> | <a href="javascript:history.back(-1)">Next Page</a>
-  <a href="javascript:window.external.AddFavorite('http://www.beehiveink.net', 'BeehiveInk')">Add to Favorites</a>
-  <script type="text/javascript">
-  
-  <!--
-  
-  var viewportwidth;
-  
-  var viewportheight;
-  
-  // the more standards compliant browsers (mozilla/netscape/opera/IE7) use window.innerWidth and window.innerHeight
-  
-  if (typeof window.innerWidth != 'undefined')
-  
-  {
-  
-        viewportwidth = window.innerWidth,
-  
-        viewportheight = window.innerHeight
-  
-  }
-  
-  // IE6 in standards compliant mode (i.e. with a valid doctype as the first line in the document)
-  
-  else if (typeof document.documentElement != 'undefined'
-  
-       && typeof document.documentElement.clientWidth !=
-  
-       'undefined' && document.documentElement.clientWidth != 0)
-  
-  {
-  
-         viewportwidth = document.documentElement.clientWidth,
-  
-         viewportheight = document.documentElement.clientHeight
-  
-  }
-  
-  // older versions of IE
-  
-  else
-  
-  {
-  
-         viewportwidth = document.getElementsByTagName('body')[0].clientWidth,
-  
-         viewportheight = document.getElementsByTagName('body')[0].clientHeight
-  
-  }
-  
-  document.write('<p>Your viewport width is '+viewportwidth+'x'+viewportheight+'</p>');
-  
-  //-->
-  
-  </script>
-  <script type="text/javascript">
-  
-  if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
-  
-      if (document.cookie.indexOf("iphone_redirect=false") == -1) {
-  
-          window.location = "http://m.espn.go.com/wireless/?iphone&i=COMR";
-  
-      }
-  
-  }
-  
-  </script>
 </head>
 <body>
  <header id="home">
@@ -164,8 +57,8 @@ which the webpage is viewed: this interaction is
     </div>
      <div class="para-text">
        <strong>
-	   <p>Welcome to the digital experience<p>Developed by developers for developers</p>
-	   </strong>
+  <p>Welcome to the digital experience<p>Developed by developers for developers</p>
+  </strong>
      </div>
    </div>
      <div class="project-holder project2">
@@ -260,15 +153,28 @@ which the webpage is viewed: this interaction is
     <p>Beehive Ink</p>
   </div>
   <div class="social-links">
-    <a href="#"><i class="fab fa-facebook-f"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-vk"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
-    <a href="#"><i class="fab fa-pinterest"></i></a>
-    <a href="#"><i class="fab fa-youtube"></i></a>
+    <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.vk.com"><i class="fab fa-vk"></i></a>
+    <a href="https://www.linkedin.com"><i class="fab fa-linkedin"></i></a>
+    <a href="https://www.pinterest.com"><i class="fab fa-pinterest"></i></a>
+    <a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
   </div>
 </footer>
+<script type="text/javascript">
 
+  function understands_video() {
+  return !!document.createElement('video').canPlayType; // boolean
+  }
+ 
+  if ( !understands_video() ) {
+  // Must be older browser or IE.
+  // Maybe do something like hide custom
+  // HTML5 controls. Or whatever...
+  videoControls.style.display = 'none';
+  }
+ 
+  </script>
 <script src="main.js"></script>
 </body>
 </html>
